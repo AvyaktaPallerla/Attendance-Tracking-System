@@ -30,12 +30,12 @@ public class LoginActivity extends AppCompatActivity {
     public void login(){
         String user=username.getText().toString().trim();
         String pass=password.getText().toString().trim();
-        if(user.equals("919123456")&& pass.equals("Northwest")){
+        if(user.equals("S528162")&& pass.equals("Northwest")){
             Toast.makeText(this,"username and password matches", Toast.LENGTH_LONG).show();
             Intent intent=new Intent(this, HomeActivity.class);
             startActivity(intent);
         }
-        else if (user.equals("919540274")&&pass.equals("Avyakta")){
+        else if (user.equals("S528149")&&pass.equals("Northwest")){
             Toast.makeText(this,"username and password matches", Toast.LENGTH_LONG).show();
             Intent intent=new Intent(this, MainActivity.class);
             startActivity(intent);

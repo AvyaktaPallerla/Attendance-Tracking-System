@@ -12,12 +12,14 @@ import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 public class HomeActivity extends AppCompatActivity {
     private Button scan;
+    Button logout;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         scan=(Button)findViewById(R.id.scan);
+        logout=(Button)findViewById(R.id.button2);
         final Activity activity= this;
         scan.setOnClickListener(new View.OnClickListener()
         {
@@ -33,6 +35,13 @@ public class HomeActivity extends AppCompatActivity {
                 integrator.setBarcodeImageEnabled(false);
                 integrator.initiateScan();
 
+            }
+        });
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),LoginActivity.class);
+                HomeActivity.this.startActivity(intent);
             }
         });
     }
